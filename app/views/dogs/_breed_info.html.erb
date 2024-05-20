@@ -1,0 +1,10 @@
+<% if image_url.present? %>
+  <div id="breed_info" class='bg-white shadow rounded-lg p-3'>
+    <p class="font-normal text-sm text-gray-500 mb-1">Bread Name: <span class='font-medium text-black capitalize'><%= breed %></span></p>
+    <img class="h-96 w-full object-contain border rounded-lg" src="<%= image_url %>"/>
+  </div>
+<% else %>
+  <div class="bg-white shadow rounded-lg px-5 py-6" id="breed_info">
+    <div class="font-normal p-3 rounded-lg bg-red-50 text-red-500 border border-red-300 text-sm"><%= 'No matching breeds found.' %></div>
+  </div>
+<% end %>

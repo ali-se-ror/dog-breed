@@ -1,3 +1,17 @@
-<h1 class="text-3xl font-bold underline">
-  Hello world!
-</h1>
+
+<div class="container mx-auto py-5">
+  <div class="grid md:grid-cols-2 grid-cols-1 gap-5">
+    <div>
+      <div class="bg-white shadow rounded-lg p-3">
+        <p class="text-base font-normal mb-1">Breed</p>
+        <%= form_with url: dogs_path, class: "flex justify-center items-center" do |form| %>
+          <%= form.text_field :breed, id: "breedInput", class: "border border-gray-300 placeholder:font-light font-normal shadow-sm w-full mr-2 px-3 py-2 rounded-lg focus:outline-none focus:ring-1 focus:ring-indigo-500", placeholder: "Enter breed...", required: true %>
+          <%= form.submit "Submit", class: "bg-indigo-500 cursor-pointer text-white px-4 py-2 rounded-lg" %>
+        <% end %>
+      </div>
+    </div>
+      <div id="breedInfo">
+        <div id="breed_info"></div>
+      </div>
+  </div>
+</div>
