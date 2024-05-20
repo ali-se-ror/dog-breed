@@ -4,7 +4,7 @@ class DogBreedService
   DOG_API_URL = 'https://dog.ceo/api/breed/'
 
   def initialize(breed)
-    @breed = breed.downcase.split(' ').reverse.join('/')
+    @breed = breed.downcase.split(' ').reverse.join('/') if breed.present?
   end
 
   def fetch_breed_image
